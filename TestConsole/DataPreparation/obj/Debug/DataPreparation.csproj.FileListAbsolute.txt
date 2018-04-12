@@ -1,0 +1,12 @@
+D:\licenta\TestConsole\DataPreparation\bin\Debug\DataPreparation.dll
+D:\licenta\TestConsole\DataPreparation\bin\Debug\DataPreparation.pdb
+D:\licenta\TestConsole\DataPreparation\bin\Debug\Config.dll
+D:\licenta\TestConsole\DataPreparation\bin\Debug\DataLoader.dll
+D:\licenta\TestConsole\DataPreparation\bin\Debug\Emgu.CV.World.dll
+D:\licenta\TestConsole\DataPreparation\bin\Debug\Config.pdb
+D:\licenta\TestConsole\DataPreparation\bin\Debug\DataLoader.pdb
+D:\licenta\TestConsole\DataPreparation\bin\Debug\Emgu.CV.World.xml
+D:\licenta\TestConsole\DataPreparation\obj\Debug\DataPreparation.csprojResolveAssemblyReference.cache
+D:\licenta\TestConsole\DataPreparation\obj\Debug\DataPreparation.csproj.CoreCompileInputs.cache
+D:\licenta\TestConsole\DataPreparation\obj\Debug\DataPreparation.dll
+D:\licenta\TestConsole\DataPreparation\obj\Debug\DataPreparation.pdb

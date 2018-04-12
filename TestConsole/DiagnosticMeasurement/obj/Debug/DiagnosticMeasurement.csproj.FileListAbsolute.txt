@@ -1,0 +1,8 @@
+D:\licenta\TestConsole\DiagnosticMeasurement\bin\Debug\DiagnosticMeasurement.dll
+D:\licenta\TestConsole\DiagnosticMeasurement\bin\Debug\DiagnosticMeasurement.pdb
+D:\licenta\TestConsole\DiagnosticMeasurement\bin\Debug\Config.dll
+D:\licenta\TestConsole\DiagnosticMeasurement\bin\Debug\Config.pdb
+D:\licenta\TestConsole\DiagnosticMeasurement\obj\Debug\DiagnosticMeasurement.csprojResolveAssemblyReference.cache
+D:\licenta\TestConsole\DiagnosticMeasurement\obj\Debug\DiagnosticMeasurement.csproj.CoreCompileInputs.cache
+D:\licenta\TestConsole\DiagnosticMeasurement\obj\Debug\DiagnosticMeasurement.dll
+D:\licenta\TestConsole\DiagnosticMeasurement\obj\Debug\DiagnosticMeasurement.pdb

@@ -1,0 +1,16 @@
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\SimpleKNeighbors.dll
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\SimpleKNeighbors.pdb
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\Config.dll
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\DataPreparation.dll
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\DataUtils.dll
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\Emgu.CV.World.dll
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\DataLoader.dll
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\Config.pdb
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\DataPreparation.pdb
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\DataUtils.pdb
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\Emgu.CV.World.xml
+D:\licenta\TestConsole\SimpleKNeighbors\bin\Debug\DataLoader.pdb
+D:\licenta\TestConsole\SimpleKNeighbors\obj\Debug\SimpleKNeighbors.csprojResolveAssemblyReference.cache
+D:\licenta\TestConsole\SimpleKNeighbors\obj\Debug\SimpleKNeighbors.csproj.CoreCompileInputs.cache
+D:\licenta\TestConsole\SimpleKNeighbors\obj\Debug\SimpleKNeighbors.dll
+D:\licenta\TestConsole\SimpleKNeighbors\obj\Debug\SimpleKNeighbors.pdb

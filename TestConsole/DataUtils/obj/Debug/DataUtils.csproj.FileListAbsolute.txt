@@ -1,0 +1,8 @@
+D:\licenta\TestConsole\DataUtils\bin\Debug\DataUtils.dll
+D:\licenta\TestConsole\DataUtils\bin\Debug\DataUtils.pdb
+D:\licenta\TestConsole\DataUtils\bin\Debug\Emgu.CV.World.dll
+D:\licenta\TestConsole\DataUtils\bin\Debug\Emgu.CV.World.xml
+D:\licenta\TestConsole\DataUtils\obj\Debug\DataUtils.csproj.CoreCompileInputs.cache
+D:\licenta\TestConsole\DataUtils\obj\Debug\DataUtils.dll
+D:\licenta\TestConsole\DataUtils\obj\Debug\DataUtils.pdb
+D:\licenta\TestConsole\DataUtils\obj\Debug\DataUtils.csprojResolveAssemblyReference.cache

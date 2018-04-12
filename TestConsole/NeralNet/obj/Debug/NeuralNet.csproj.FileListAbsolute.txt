@@ -1,0 +1,10 @@
+D:\licenta\TestConsole\NeralNet\bin\Debug\NeralNet.dll
+D:\licenta\TestConsole\NeralNet\bin\Debug\NeralNet.pdb
+D:\licenta\TestConsole\NeralNet\bin\Debug\ConvNetSharp.Core.dll
+D:\licenta\TestConsole\NeralNet\bin\Debug\ConvNetSharp.Volume.dll
+D:\licenta\TestConsole\NeralNet\bin\Debug\Newtonsoft.Json.dll
+D:\licenta\TestConsole\NeralNet\bin\Debug\Newtonsoft.Json.xml
+D:\licenta\TestConsole\NeralNet\obj\Debug\NeuralNet.csprojResolveAssemblyReference.cache
+D:\licenta\TestConsole\NeralNet\obj\Debug\NeuralNet.csproj.CoreCompileInputs.cache
+D:\licenta\TestConsole\NeralNet\obj\Debug\NeralNet.dll
+D:\licenta\TestConsole\NeralNet\obj\Debug\NeralNet.pdb

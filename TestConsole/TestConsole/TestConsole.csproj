@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38B68E43-2709-464C-9CF9-5D7DD0E1E91B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestConsole</RootNamespace>
+    <AssemblyName>TestConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.DebuggerVisualizers.VS2017, Version=3.3.0.2824, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Emgu\emgucv-windesktop 3.2.0.2682\bin\Emgu.CV.DebuggerVisualizers.VS2017.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI, Version=3.3.0.2824, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Emgu\emgucv-windesktop 3.2.0.2682\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL, Version=3.3.0.2824, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Emgu\emgucv-windesktop 3.2.0.2682\bin\Emgu.CV.UI.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World, Version=3.3.0.2824, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Emgu\emgucv-windesktop 3.2.0.2682\bin\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Emgu\emgucv-windesktop 3.2.0.2682\bin\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="concrt140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cvextern.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcp140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_ffmpeg320_64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="vcruntime140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\Config.csproj">
+      <Project>{6c197ec1-9316-4aec-b131-f45ec011f75e}</Project>
+      <Name>Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataPreparation\DataPreparation.csproj">
+      <Project>{e0ba8b81-ad8c-43c0-86cd-8f50bce1de33}</Project>
+      <Name>DataPreparation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DiagnosticMeasurement\DiagnosticMeasurement.csproj">
+      <Project>{24c962e8-b80c-475a-8c62-c309ccad6e48}</Project>
+      <Name>DiagnosticMeasurement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeralNet\NeuralNet.csproj">
+      <Project>{4bba77cc-49f0-4e21-94b8-d2a77af9d404}</Project>
+      <Name>NeuralNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleKNeighbors\SimpleKNeighbors.csproj">
+      <Project>{bdc7ad7a-85de-4d00-9675-49ac5ec059fb}</Project>
+      <Name>SimpleKNeighbors</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

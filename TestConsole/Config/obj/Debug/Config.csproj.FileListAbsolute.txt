@@ -1,0 +1,6 @@
+D:\licenta\TestConsole\Config\bin\Debug\Config.dll
+D:\licenta\TestConsole\Config\bin\Debug\Config.pdb
+D:\licenta\TestConsole\Config\obj\Debug\Config.csproj.CoreCompileInputs.cache
+D:\licenta\TestConsole\Config\obj\Debug\Config.dll
+D:\licenta\TestConsole\Config\obj\Debug\Config.pdb
+D:\licenta\TestConsole\Config\obj\Debug\Config.csprojResolveAssemblyReference.cache
