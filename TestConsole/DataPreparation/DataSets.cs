@@ -32,10 +32,11 @@ namespace DataPreparation
 
             List<InputEntry> lis = reader.labels.Select((t, i) => new InputEntry { Label = t, Image = ready_train_images[i] }).ToList();
 
-            this.Train = new DataSet(lis.GetRange(ready_train_images.Count - validationSize, validationSize));
-            this.Validation = new DataSet(lis.GetRange(0, ready_train_images.Count - validationSize));
+            var train_list = lis.GroupBy(x => x.Label).SelectMany(x => x.Take((int)(0.75 * x.Count()))).ToList();
+            this.Train = new DataSet(train_list);
+            this.Validation = new DataSet(lis.Where(x =>!train_list.Contains(x)).ToList());
             //  this.Test = new DataSet(testing_images);
-            this.Labels = reader.labels;
+            this.Labels = reader.labels.Distinct().ToList();
             return true;
         }
     }

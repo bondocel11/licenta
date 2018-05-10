@@ -1,0 +1,2 @@
+E:\Licenta2018\TestConsole\SimpleKNeighbors\obj\Release\SimpleKNeighbors.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\SimpleKNeighbors\obj\Release\SimpleKNeighbors.csproj.CoreCompileInputs.cache

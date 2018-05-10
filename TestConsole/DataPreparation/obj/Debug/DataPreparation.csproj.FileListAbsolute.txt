@@ -10,3 +10,16 @@ D:\licenta\TestConsole\DataPreparation\obj\Debug\DataPreparation.csprojResolveAs
 D:\licenta\TestConsole\DataPreparation\obj\Debug\DataPreparation.csproj.CoreCompileInputs.cache
 D:\licenta\TestConsole\DataPreparation\obj\Debug\DataPreparation.dll
 D:\licenta\TestConsole\DataPreparation\obj\Debug\DataPreparation.pdb
+E:\Licenta2018\TestConsole\DataPreparation\bin\Debug\DataPreparation.dll
+E:\Licenta2018\TestConsole\DataPreparation\bin\Debug\DataPreparation.pdb
+E:\Licenta2018\TestConsole\DataPreparation\bin\Debug\Config.dll
+E:\Licenta2018\TestConsole\DataPreparation\bin\Debug\DataLoader.dll
+E:\Licenta2018\TestConsole\DataPreparation\bin\Debug\DataUtils.dll
+E:\Licenta2018\TestConsole\DataPreparation\bin\Debug\Config.pdb
+E:\Licenta2018\TestConsole\DataPreparation\bin\Debug\DataLoader.pdb
+E:\Licenta2018\TestConsole\DataPreparation\bin\Debug\DataUtils.pdb
+E:\Licenta2018\TestConsole\DataPreparation\obj\Debug\DataPreparation.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\DataPreparation\obj\Debug\DataPreparation.csproj.CoreCompileInputs.cache
+E:\Licenta2018\TestConsole\DataPreparation\obj\Debug\DataPreparation.csproj.CopyComplete
+E:\Licenta2018\TestConsole\DataPreparation\obj\Debug\DataPreparation.dll
+E:\Licenta2018\TestConsole\DataPreparation\obj\Debug\DataPreparation.pdb

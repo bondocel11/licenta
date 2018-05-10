@@ -1,0 +1,5 @@
+E:\Licenta2018\TestConsole\Config\bin\Release\Config.dll
+E:\Licenta2018\TestConsole\Config\bin\Release\Config.pdb
+E:\Licenta2018\TestConsole\Config\obj\Release\Config.csproj.CoreCompileInputs.cache
+E:\Licenta2018\TestConsole\Config\obj\Release\Config.dll
+E:\Licenta2018\TestConsole\Config\obj\Release\Config.pdb

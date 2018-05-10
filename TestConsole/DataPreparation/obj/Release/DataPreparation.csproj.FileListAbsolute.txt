@@ -1,0 +1,2 @@
+E:\Licenta2018\TestConsole\DataPreparation\obj\Release\DataPreparation.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\DataPreparation\obj\Release\DataPreparation.csproj.CoreCompileInputs.cache

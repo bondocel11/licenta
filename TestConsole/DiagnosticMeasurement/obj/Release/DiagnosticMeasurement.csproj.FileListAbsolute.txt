@@ -1,0 +1,2 @@
+E:\Licenta2018\TestConsole\DiagnosticMeasurement\obj\Release\DiagnosticMeasurement.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\DiagnosticMeasurement\obj\Release\DiagnosticMeasurement.csproj.CoreCompileInputs.cache

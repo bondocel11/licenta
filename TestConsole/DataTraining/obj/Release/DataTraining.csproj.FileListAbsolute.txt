@@ -1,0 +1,2 @@
+E:\Licenta2018\TestConsole\DataTraining\obj\Release\DataTraining.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\DataTraining\obj\Release\DataTraining.csproj.CoreCompileInputs.cache

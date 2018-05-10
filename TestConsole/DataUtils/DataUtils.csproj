@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataUtils</RootNamespace>
     <AssemblyName>DataUtils</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,7 +46,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataUtils.cs" />
+    <Compile Include="HOGcell.cs" />
+    <Compile Include="LabelTranslation.cs" />
+    <Compile Include="MatExtensions.cs" />
+    <Compile Include="MatUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\Config.csproj">
+      <Project>{6c197ec1-9316-4aec-b131-f45ec011f75e}</Project>
+      <Name>Config</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

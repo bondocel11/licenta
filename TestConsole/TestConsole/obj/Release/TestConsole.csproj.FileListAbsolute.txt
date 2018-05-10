@@ -1,0 +1,2 @@
+E:\Licenta2018\TestConsole\TestConsole\obj\Release\TestConsole.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\TestConsole\obj\Release\TestConsole.csproj.CoreCompileInputs.cache

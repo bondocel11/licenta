@@ -11,6 +11,10 @@ using Emgu.CV.CvEnum;
 using NeuralNet;
 using DataPreparation;
 using DiagnosticMeasurement;
+using System.Drawing;
+using DataUtils;
+using DataTraining;
+using Emgu.CV.ML;
 
 namespace TestConsole
 {
@@ -19,41 +23,41 @@ namespace TestConsole
        
         static void Main(string[] args)
         {
-            /* String win1 = "Test Window"; //The name of the window
-             CvInvoke.NamedWindow(win1); //Create the window using the specific name
-
-             Mat img = new Mat(200, 400, DepthType.Cv8U, 3); //Create a 3 channel image of 400x200
-             img.SetTo(new Bgr(255, 0, 0).MCvScalar); // set it to Blue color
-
-             //Draw "Hello, world." on the image using the specific font
-             CvInvoke.PutText(
-                img,
-                "Hello, world",
-                new System.Drawing.Point(10, 80),
-                FontFace.HersheyComplex,
-                1.0,
-                new Bgr(0, 255, 0).MCvScalar);
-
-
-             CvInvoke.Imshow(win1, img); //Show the image
-             CvInvoke.WaitKey(0);  //Wait for the key pressing event
-             CvInvoke.DestroyWindow(win1); //Destroy the window if key is pressed*/
             DataSets data = new DataSets();
-            if (!data.Load(100))
+            Mat img = CvInvoke.Imread("E:/Licenta2018/eiffel1.jpg", Emgu.CV.CvEnum.ImreadModes.AnyColor);
+           SIFT.GenerateOctaves(img);
+            /*if (!data.Load(100))
             {
                 return;
-            }
-            var tup = SimpleKNeighbors.KNeighborsModel.Train(data);
-            Mat img = CvInvoke.Imread("D:/licenta/eiffel1.jpg", Emgu.CV.CvEnum.ImreadModes.AnyColor);
-            int[][] confusionMatrix=ComputePerformance.DesignConfusionMatrix(data.Labels,data.Validation.Images.Select(x => x.Label).ToArray(), SimpleKNeighbors.KNeighborsModel.ClassifyAll(tup,data.Validation.Images));
-            //Console.WriteLine(SimpleKNeighbors.KNeighborsModel.Classify(tup, img));
-            for (int i = 0; i < Config.Configuration.NR_OF_CLASSES; i++)
-            {
-                Console.WriteLine("Accuracy of " + i + " " + (float)ComputePerformance.ComputePerformanceMetricsForClass(confusionMatrix, i));
+            }*/
+            /* var tup = SimpleKNeighbors.KNeighborsModel.Train(data);
 
-            }
-            
+              int[][] confusionMatrix=ComputePerformance.DesignConfusionMatrix(data.Labels,data.Validation.Images.Select(x => x.Label).ToArray(), SimpleKNeighbors.KNeighborsModel.ClassifyAll(tup,data.Validation.Images));
+             Console.WriteLine(SimpleKNeighbors.KNeighborsModel.Classify(tup, img));
+             for (int i = 0; i < Config.Configuration.NR_OF_CLASSES; i++)
+              {
+                  Console.WriteLine("Accuracy of " + i + " " + (float)ComputePerformance.ComputePerformanceMetricsForClass(confusionMatrix, i));
+
+              }
+           
+            Mat img = CvInvoke.Imread("E:/Licenta2018/eiffel1.jpg", Emgu.CV.CvEnum.ImreadModes.AnyColor);
+            Mat new_img = new Mat();
+            CvInvoke.Resize(img,new_img, new Size(128,128), 0, 0, Inter.Linear);
+            double[] hog=DataUtils.DataUtils.HOG(new_img);
+
+
+            HogSets hs = new HogSets();
+            if (!hs.Load(100))
+             {
+                 return;
+             }
+            //var model= RBFKernelTraining.Train(hs.Train.data, hs.Train.outputs);
+           
+             //var ovo= GaussianKernelTraining.Train(hs.Train.data, hs.Train.outputs);
+            // var ovo1 = OtherSVMKernelTraining.TrainWithOtherSVM(hs.Train.data, hs.Train.outputs);
+            */
             Console.ReadKey();
+
         }
     }
 }

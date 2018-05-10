@@ -13,3 +13,11 @@ D:\licenta\TestConsole\DataLoader\obj\Debug\DataLoader.csproj.CoreCompileInputs.
 D:\licenta\TestConsole\DataLoader\obj\Debug\DataLoader.dll
 D:\licenta\TestConsole\DataLoader\obj\Debug\DataLoader.pdb
 D:\licenta\TestConsole\DataLoader\obj\Debug\DataLoader.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\DataLoader\bin\Debug\DataLoader.dll
+E:\Licenta2018\TestConsole\DataLoader\bin\Debug\DataLoader.pdb
+E:\Licenta2018\TestConsole\DataLoader\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+E:\Licenta2018\TestConsole\DataLoader\obj\Debug\DataLoader.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\DataLoader\obj\Debug\DataLoader.csproj.CoreCompileInputs.cache
+E:\Licenta2018\TestConsole\DataLoader\obj\Debug\DataLoader.csproj.CopyComplete
+E:\Licenta2018\TestConsole\DataLoader\obj\Debug\DataLoader.dll
+E:\Licenta2018\TestConsole\DataLoader\obj\Debug\DataLoader.pdb

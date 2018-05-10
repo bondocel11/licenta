@@ -1,0 +1,145 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "460b5e5f7bfc0af3c6c1cd4f586e7918dc300b33"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "DataTraining/1.0.0": {
+        "dependencies": {
+          "Accord": "3.7.0",
+          "Accord.MachineLearning": "3.7.0",
+          "DiagnosticMeasurement": "1.0.0",
+          "NETStandard.Library": "2.0.1"
+        },
+        "runtime": {
+          "DataTraining.dll": {}
+        }
+      },
+      "Accord/3.7.0": {
+        "runtime": {
+          "lib/netstandard2.0/Accord.dll": {}
+        }
+      },
+      "Accord.MachineLearning/3.7.0": {
+        "dependencies": {
+          "Accord": "3.7.0",
+          "Accord.Math": "3.7.0",
+          "Accord.Statistics": "3.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.MachineLearning.dll": {}
+        }
+      },
+      "Accord.Math/3.7.0": {
+        "dependencies": {
+          "Accord": "3.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.Math.Core.dll": {},
+          "lib/netstandard2.0/Accord.Math.dll": {}
+        }
+      },
+      "Accord.Statistics/3.7.0": {
+        "dependencies": {
+          "Accord": "3.7.0",
+          "Accord.Math": "3.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.Statistics.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.1": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Config/1.0.0": {
+        "runtime": {
+          "Config.dll": {}
+        }
+      },
+      "DataUtils/1.0.0": {
+        "runtime": {
+          "DataUtils.dll": {}
+        }
+      },
+      "DiagnosticMeasurement/1.0.0": {
+        "dependencies": {
+          "Config": "1.0.0",
+          "DataUtils": "1.0.0"
+        },
+        "runtime": {
+          "DiagnosticMeasurement.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DataTraining/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Accord/3.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gaTV086rKr4NAyDbxGI9usqeRvxAS76K6oIHbgcvCpQ/Y+JLX5zgZi4m2gOxeDQFYdD3eJKqpRhNqJIS8/fyaw==",
+      "path": "accord/3.7.0",
+      "hashPath": "accord.3.7.0.nupkg.sha512"
+    },
+    "Accord.MachineLearning/3.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PaCgCOtFPPli5hKPAUKxVdsADN6nz/Lk4KpBjRdOwSSjeagqR7LfYHNJV6ysWtkgbX1lnx5NTrgKu4GUnU5R/A==",
+      "path": "accord.machinelearning/3.7.0",
+      "hashPath": "accord.machinelearning.3.7.0.nupkg.sha512"
+    },
+    "Accord.Math/3.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XE7E6YgebSjkySrZWKYyvhLIfmPsEHxz2+ExOs0omv9CG0KTFWVopYhcDKM9WRsdR8mtl0aAASgl457TAOlipQ==",
+      "path": "accord.math/3.7.0",
+      "hashPath": "accord.math.3.7.0.nupkg.sha512"
+    },
+    "Accord.Statistics/3.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lGsHSFRzN7km2OQJD5XMNWBfokGlL3ryGdW0rlGV3eoM6Y/cxEYOEql4oaGER8HipJXHZZ/xO+jaIPMIZKOhAA==",
+      "path": "accord.statistics/3.7.0",
+      "hashPath": "accord.statistics.3.7.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
+      "path": "netstandard.library/2.0.1",
+      "hashPath": "netstandard.library.2.0.1.nupkg.sha512"
+    },
+    "Config/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataUtils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DiagnosticMeasurement/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -4,3 +4,9 @@ D:\licenta\TestConsole\Config\obj\Debug\Config.csproj.CoreCompileInputs.cache
 D:\licenta\TestConsole\Config\obj\Debug\Config.dll
 D:\licenta\TestConsole\Config\obj\Debug\Config.pdb
 D:\licenta\TestConsole\Config\obj\Debug\Config.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\Config\bin\Debug\Config.dll
+E:\Licenta2018\TestConsole\Config\bin\Debug\Config.pdb
+E:\Licenta2018\TestConsole\Config\obj\Debug\Config.csproj.CoreCompileInputs.cache
+E:\Licenta2018\TestConsole\Config\obj\Debug\Config.dll
+E:\Licenta2018\TestConsole\Config\obj\Debug\Config.pdb
+E:\Licenta2018\TestConsole\Config\obj\Debug\Config.csprojResolveAssemblyReference.cache

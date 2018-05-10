@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataPreparation</RootNamespace>
     <AssemblyName>DataPreparation</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,8 +49,12 @@
     <Compile Include="DataMolding.cs" />
     <Compile Include="DataSet.cs" />
     <Compile Include="DataSets.cs" />
+    <Compile Include="Feature.cs" />
+    <Compile Include="HogSet.cs" />
+    <Compile Include="HogSets.cs" />
     <Compile Include="InputEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIFT.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Config\Config.csproj">
@@ -60,6 +65,13 @@
       <Project>{7c843fcc-8310-42d4-8290-a5dd0549578f}</Project>
       <Name>DataLoader</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataUtils\DataUtils.csproj">
+      <Project>{19e4a7c5-ed9e-4248-8e35-0404a9f6b0af}</Project>
+      <Name>DataUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Emgu\CV\CvEnum\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,7 +20,7 @@ namespace SimpleKNeighbors
             int i = 0;
             trainData.Train.Images.ForEach(inputEntry =>
             {
-                int[] histogram = DataUtils.DataUtils.calcHist(inputEntry.Image, Configuration.M);
+                int[] histogram = DataUtils.DataUtils.calcHist(inputEntry.Image);
                 for (int d = 0; d < histogram.Length; d++)
                     X[i, d]= histogram[d];
                 Y[i] = inputEntry.Label;
@@ -30,9 +30,9 @@ namespace SimpleKNeighbors
             return Tuple.Create(X,Y);
         }
 
-        private static string Classify(Tuple<double[,], string[]> dataset, Mat unknown)
+        public static string Classify(Tuple<double[,], string[]> dataset, Mat unknown)
         {
-            int[] histogram = DataUtils.DataUtils.calcHist(unknown, Configuration.M);
+            int[] histogram = DataUtils.DataUtils.calcHist(unknown);
             int j = 0;
             Distance[] distances = new Distance[dataset.Item1.GetLength(0)];
             for (int i = 0; i < dataset.Item1.GetLength(0); i++)

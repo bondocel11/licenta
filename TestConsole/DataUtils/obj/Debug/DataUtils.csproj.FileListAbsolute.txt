@@ -6,3 +6,12 @@ D:\licenta\TestConsole\DataUtils\obj\Debug\DataUtils.csproj.CoreCompileInputs.ca
 D:\licenta\TestConsole\DataUtils\obj\Debug\DataUtils.dll
 D:\licenta\TestConsole\DataUtils\obj\Debug\DataUtils.pdb
 D:\licenta\TestConsole\DataUtils\obj\Debug\DataUtils.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\DataUtils\bin\Debug\DataUtils.dll
+E:\Licenta2018\TestConsole\DataUtils\bin\Debug\DataUtils.pdb
+E:\Licenta2018\TestConsole\DataUtils\obj\Debug\DataUtils.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\DataUtils\obj\Debug\DataUtils.csproj.CoreCompileInputs.cache
+E:\Licenta2018\TestConsole\DataUtils\obj\Debug\DataUtils.csproj.CopyComplete
+E:\Licenta2018\TestConsole\DataUtils\obj\Debug\DataUtils.dll
+E:\Licenta2018\TestConsole\DataUtils\obj\Debug\DataUtils.pdb
+E:\Licenta2018\TestConsole\DataUtils\bin\Debug\Config.dll
+E:\Licenta2018\TestConsole\DataUtils\bin\Debug\Config.pdb

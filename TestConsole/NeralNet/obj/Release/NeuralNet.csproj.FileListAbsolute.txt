@@ -1,0 +1,11 @@
+E:\Licenta2018\TestConsole\NeralNet\bin\Release\NeralNet.dll
+E:\Licenta2018\TestConsole\NeralNet\bin\Release\NeralNet.pdb
+E:\Licenta2018\TestConsole\NeralNet\bin\Release\ConvNetSharp.Core.dll
+E:\Licenta2018\TestConsole\NeralNet\bin\Release\ConvNetSharp.Volume.dll
+E:\Licenta2018\TestConsole\NeralNet\bin\Release\Newtonsoft.Json.dll
+E:\Licenta2018\TestConsole\NeralNet\bin\Release\Newtonsoft.Json.xml
+E:\Licenta2018\TestConsole\NeralNet\obj\Release\NeuralNet.csprojResolveAssemblyReference.cache
+E:\Licenta2018\TestConsole\NeralNet\obj\Release\NeuralNet.csproj.CoreCompileInputs.cache
+E:\Licenta2018\TestConsole\NeralNet\obj\Release\NeuralNet.csproj.CopyComplete
+E:\Licenta2018\TestConsole\NeralNet\obj\Release\NeralNet.dll
+E:\Licenta2018\TestConsole\NeralNet\obj\Release\NeralNet.pdb
