@@ -191,7 +191,7 @@ namespace DataUtils
             return hist;
         }
 
-        private static double[,] ComputeMagnitude(Mat gx, Mat gy)
+        public static double[,] ComputeMagnitude(Mat gx, Mat gy)
         {
             double[,] mag = new double[gx.Rows, gx.Cols];
             for (int i = 0; i < gx.Rows; i++)
@@ -206,7 +206,7 @@ namespace DataUtils
             return mag;
         }
 
-        private static double[,] ComputeDirection(Mat gx, Mat gy)
+        public static double[,] ComputeDirection(Mat gx, Mat gy)
         {
             double[,] angle = new double[gx.Rows, gx.Cols];
             for (int i = 0; i < gx.Rows; i++)

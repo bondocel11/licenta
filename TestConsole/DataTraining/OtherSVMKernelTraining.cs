@@ -30,7 +30,7 @@ namespace DataTraining
 
                 ranges: new
                 {
-                    Kernel = GridSearch.Values<IKernel>(new Linear(), new ChiSquare(), new Sigmoid(),new Gaussian()),
+                    Kernel = GridSearch.Values<IKernel>(new Linear(), new ChiSquare(), new Sigmoid()),
                     Complexity = GridSearch.Range(1e-10, 0.01, stepSize: 0.05),
                     Tolerance = GridSearch.Range(1e-10, 1.0, stepSize: 0.05)
                 },

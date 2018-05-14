@@ -136,6 +136,10 @@
       <Project>{24c962e8-b80c-475a-8c62-c309ccad6e48}</Project>
       <Name>DiagnosticMeasurement</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ModelValidation\ModelValidation.csproj">
+      <Project>{5DFCA154-3A45-4853-A145-9784187C349E}</Project>
+      <Name>ModelValidation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NeralNet\NeuralNet.csproj">
       <Project>{4bba77cc-49f0-4e21-94b8-d2a77af9d404}</Project>
       <Name>NeuralNet</Name>

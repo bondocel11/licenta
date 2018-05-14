@@ -34,5 +34,9 @@ namespace Config
         public static double K_BLUR = 1.41;
         public static double SIGMA = 0.7;
         public const double CONTRAST_THRESHOLD = 0.03;
+
+        public static double CURVATURE_THRESHOLD = 5.0;
+        public static int MAX_KERNEL_SIZE =20;
+        public static double CUTOFF =5 *SIGMA;
     }
 }

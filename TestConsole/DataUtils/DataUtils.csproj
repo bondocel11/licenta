@@ -50,6 +50,7 @@
     <Compile Include="LabelTranslation.cs" />
     <Compile Include="MatExtensions.cs" />
     <Compile Include="MatUtils.cs" />
+    <Compile Include="mySIFT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

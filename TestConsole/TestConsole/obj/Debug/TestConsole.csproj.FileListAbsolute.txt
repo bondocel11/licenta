@@ -84,3 +84,5 @@ E:\Licenta2018\TestConsole\TestConsole\obj\Debug\TestConsole.csproj.CoreCompileI
 E:\Licenta2018\TestConsole\TestConsole\obj\Debug\TestConsole.csproj.CopyComplete
 E:\Licenta2018\TestConsole\TestConsole\obj\Debug\TestConsole.exe
 E:\Licenta2018\TestConsole\TestConsole\obj\Debug\TestConsole.pdb
+E:\Licenta2018\TestConsole\TestConsole\bin\Debug\ModelValidation.dll
+E:\Licenta2018\TestConsole\TestConsole\bin\Debug\ModelValidation.pdb

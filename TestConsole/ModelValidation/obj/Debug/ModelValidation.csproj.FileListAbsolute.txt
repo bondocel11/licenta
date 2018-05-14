@@ -23,3 +23,5 @@ E:\Licenta2018\TestConsole\ModelValidation\bin\Debug\Accord.Statistics.xml
 E:\Licenta2018\TestConsole\ModelValidation\obj\Debug\ModelValidation.csproj.CopyComplete
 E:\Licenta2018\TestConsole\ModelValidation\obj\Debug\ModelValidation.dll
 E:\Licenta2018\TestConsole\ModelValidation\obj\Debug\ModelValidation.pdb
+E:\Licenta2018\TestConsole\ModelValidation\bin\Debug\Config.dll
+E:\Licenta2018\TestConsole\ModelValidation\bin\Debug\Config.pdb

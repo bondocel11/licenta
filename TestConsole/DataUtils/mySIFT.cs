@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataPreparation
+namespace DataUtils
 {
-    public static class SIFT
+    public static class mySIFT
     {
         //http://aishack.in/tutorials/sift-scale-invariant-feature-transform-introduction/
         public static void GenerateOctaves(Mat img)
@@ -71,9 +71,9 @@ namespace DataPreparation
 
                }
                */
-            ComputeLaplacianOfGaussian(octaves);
+            ComputeLaplacianOfGaussian(octaves,sigmas);
         }
-        public static void ComputeLaplacianOfGaussian(Octave[] octaves)
+        public static void ComputeLaplacianOfGaussian(Octave[] octaves, double[,] sigmas)
         {
             //Aici intrebarea e: E bine ca am facut Math.Abs din diferenta?
             Octave[] LoG = new Octave[Config.Configuration.NO_OCTAVES];
@@ -100,51 +100,49 @@ namespace DataPreparation
                  //   CvInvoke.WaitKey();
                 }
             }
-            FindLocalExtremes(LoG,"MAX");
-            FindLocalExtremes(LoG, "MIN");
+            FindLocalExtremes(LoG,sigmas);
+       
         }
 
-        public static void FindLocalExtremes(Octave[] octaves,string localExtreme)
+        public static void FindLocalExtremes(Octave[] octaves, double[,] sigmas)
         {
-            Octave[] maxExtremes = new Octave[Config.Configuration.NO_OCTAVES];
-            Octave[] minExtremes = new Octave[Config.Configuration.NO_OCTAVES];
+            //  Octave[] maxExtremes = new Octave[Config.Configuration.NO_OCTAVES];
+            int no_extremes = 0;
+            Octave[] extremes = new Octave[Config.Configuration.NO_OCTAVES];
             for (int i = 0; i < Config.Configuration.NO_OCTAVES - 1; i++)
-            {
-                minExtremes[i] = new Octave();
-                maxExtremes[i] = new Octave();
+            {   
+                extremes[i] = new Octave();
+            //    maxExtremes[i] = new Octave();
                 for (int j = 1; j < Config.Configuration.NO_BLUR_LVL - 2; j++)
                 {
 
                     var rows = octaves[i].images[j].Rows;
                     var cols = octaves[i].images[j].Cols;
-                    minExtremes[i].images[j] =MatExtensions.InitMatWithZeros(rows, cols, DepthType.Cv8U, 1);
-                    maxExtremes[i].images[j] = MatExtensions.InitMatWithZeros(rows, cols, DepthType.Cv8U, 1);
+                    extremes[i].images[j] =MatExtensions.InitMatWithZeros(rows, cols, DepthType.Cv8U, 1);
+               //     maxExtremes[i].images[j] = MatExtensions.InitMatWithZeros(rows, cols, DepthType.Cv8U, 1);
                     for (int ci = 1; ci < rows-1; ci++)
                     {
                         for (int cj =1; cj < cols-1; cj++)
                         {
                             byte currentPoint = octaves[i].images[j].GetValue(ci, cj);
-                            bool isExtreme = true;
+                            bool isMinExtreme = true;
+                            bool isMaxExtreme = true;
+                           
                             int lvl = j - 1;
-                            while ((lvl < j + 2) && isExtreme)
+                            while ((lvl < j + 2) && (isMinExtreme||isMaxExtreme))
                             {
                                 int row = ci - 1;
-                                while ((row < ci + 2) && isExtreme)
+                                while ((row < ci + 2) && (isMinExtreme || isMaxExtreme))
                                 {
                                     int col = cj - 1;
-                                    while ((col < cj + 2)&& isExtreme)
+                                    while ((col < cj + 2)&& (isMinExtreme || isMaxExtreme))
                                     {
                                         byte auxPoint = octaves[i].images[lvl].GetValue(row, col);
-                                        if (localExtreme == "MAX")
-                                        {
-                                            
-                                            if (currentPoint < auxPoint) isExtreme = false;
-                                        }
-                                        else
-                                        {
-                                  
-                                            if (currentPoint > auxPoint) isExtreme = false;
-                                        }
+                                      
+                                            if (currentPoint < auxPoint) isMaxExtreme = false;
+                                       
+                                            if (currentPoint > auxPoint) isMinExtreme = false;
+                                      
                                         col++;
                                     }
                                     row++;
@@ -152,8 +150,10 @@ namespace DataPreparation
 
                                 lvl++;
                             }
-                            if (localExtreme=="MAX" && isExtreme) maxExtremes[i].images[j].SetValue(ci, cj, (byte)octaves[i].images[j].GetValue(ci, cj));
-                            if (localExtreme == "MIN" && isExtreme) minExtremes[i].images[j].SetValue(ci, cj,(byte)octaves[i].images[j].GetValue(ci, cj));
+                            if (isMinExtreme || isMaxExtreme) {
+                                extremes[i].images[j].SetValue(ci, cj, (byte)octaves[i].images[j].GetValue(ci, cj));
+                                no_extremes++;
+                            } 
                        
                         }
                     }
@@ -170,11 +170,11 @@ namespace DataPreparation
                      CvInvoke.WaitKey();
                  }
              }*/
-
-            EliminateSomePointsWithComplicatedMathematics(maxExtremes, minExtremes);
+            Console.WriteLine("Before corner detection: "+no_extremes);
+            EliminateSomePointsWithComplicatedMathematics(extremes,sigmas);
         }
 
-        private static void EliminateSomePointsWithComplicatedMathematics(Octave[] maxExtremes, Octave[] minExtremes)
+        private static void EliminateSomePointsWithComplicatedMathematics(Octave[] extremes, double[,] sigmas)
         {
             int numremoved = 0;
             //contrast check
@@ -182,29 +182,108 @@ namespace DataPreparation
             {
                 for (int j = 1; j < Config.Configuration.NO_BLUR_LVL - 2; j++)
                 {
-                    var rows = maxExtremes[i].images[j].Rows;
-                    var cols = maxExtremes[i].images[j].Cols;
+                    var rows = extremes[i].images[j].Rows;
+                    var cols = extremes[i].images[j].Cols;
                     for (int ci = 1; ci < rows - 1; ci++)
                     {
                         for (int cj = 1; cj < cols - 1; cj++)
                         {
-                            if (minExtremes[i].images[j].GetValue(ci, cj) > 0)
+                            if (extremes[i].images[j].GetValue(ci, cj) > 0)
                             {
-                                if (Math.Abs(CvInvoke.cvGetReal2D(maxExtremes[i].images[j], ci, cj))<Config.Configuration.CONTRAST_THRESHOLD)
+                                if (Math.Abs(extremes[i].images[j].GetValue(ci,cj))<Config.Configuration.CONTRAST_THRESHOLD)
                                 {
                                     numremoved++;
-                                    minExtremes[i].images[j].SetValue(ci, cj, 0);
+                                    extremes[i].images[j].SetValue(ci, cj, (byte)0);
                                 }
 
-                                
+                                double dii = extremes[i].images[j].GetValue(ci - 1, cj) +
+                                    extremes[i].images[j].GetValue(ci + 1, cj) -
+                                    2.0 * extremes[i].images[j].GetValue(ci, cj);
+
+                                double djj = extremes[i].images[j].GetValue(ci , cj-1) +
+                                    extremes[i].images[j].GetValue(ci, cj+1) -
+                                    2.0 * extremes[i].images[j].GetValue(ci, cj);
+
+                                double dij = extremes[i].images[j].GetValue(ci - 1, cj-1) +
+                                    extremes[i].images[j].GetValue(ci+1, cj +1) +
+                                   extremes[i].images[j].GetValue(ci-1 , cj + 1)+
+                                   extremes[i].images[j].GetValue(ci +1, cj - 1) -
+                                   2.0 * extremes[i].images[j].GetValue(ci, cj);
+
+                                double trH = dii + djj;
+                                double detH = dii * djj - dij * dij;
+
+                                double curvature_ratio = trH * trH / detH;
+                                if (detH<0 || curvature_ratio < Config.Configuration.CURVATURE_THRESHOLD)
+                                {
+                                    numremoved++;
+                                    extremes[i].images[j].SetValue(ci, cj, (byte)0);
+                                }
                             }
-                                
 
+                          
 
+                        }
+                    }
+                  
+                }
+            }
+            Console.WriteLine("Removed" + numremoved);
+            AssigningKeypointOrientation(extremes,sigmas);
+        }
+        public static void AssigningKeypointOrientation(Octave[] extremes, double[,] sigmas)
+        {
+            Octave[] magnitude = new Octave[Config.Configuration.NO_OCTAVES];
+            Octave[] orientations = new Octave[Config.Configuration.NO_OCTAVES];
+          
+            for (int i = 0; i < Config.Configuration.NO_OCTAVES; i++)
+            {
+                int scale =(int) Math.Pow(2, i);
+                for (int j = 1; j < extremes[i].images.Length+1; j++)
+                {
+                    Mat gx = new Mat();
+                    Mat gy = new Mat();
+                    CvInvoke.Sobel(extremes[i].images[j], gx, Emgu.CV.CvEnum.DepthType.Cv32F, 1, 0, 1);
+                    CvInvoke.Sobel(extremes[i].images[j], gy, Emgu.CV.CvEnum.DepthType.Cv32F, 0, 1, 1);
+
+                    double[,] mag = DataUtils.ComputeMagnitude(gx, gy);
+                    double[,] angle =DataUtils.ComputeDirection(gx, gy);
+                    double sigma = sigmas[i,j];
+                    int window_size= GetKernelSize(1.5 * sigma);
+                    int rows = extremes[i].images[j].Rows;
+                    int cols= extremes[i].images[j].Cols;
+                    for (int row = window_size/2; row < rows-window_size/2; row++)
+                    {
+                        for (int col = window_size / 2; col < cols- window_size / 2; cols++)
+                        {
+                            if (extremes[i].images[j].GetValue(row, col) > 0)
+                            {
+                                double[] hist = new double[10];
+                                for (int ci = -window_size / 2; ci < window_size / 2; ci++)
+                                {
+                                    for (int cj = -window_size / 2; cj < window_size / 2; cj++)
+                                    {
+                                        double grad = angle[row + ci, col + cj];
+                                        hist[(int)grad/10]+= mag[row + ci, col + cj];
+
+                                    }
+                                }
+                                for (int ci = 0; ci < 10; ci++)
+                                {
+                                    ;
+                                }
+                            }
                         }
                     }
                 }
             }
+
+        }
+
+        private static int GetKernelSize(object p)
+        {
+            int i;
+            return 13;
         }
 
         public class Octave

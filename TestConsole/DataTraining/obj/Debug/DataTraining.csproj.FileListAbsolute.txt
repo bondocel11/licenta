@@ -21,3 +21,5 @@ E:\Licenta2018\TestConsole\DataTraining\obj\Debug\DataTraining.csproj.CoreCompil
 E:\Licenta2018\TestConsole\DataTraining\obj\Debug\DataTraining.csproj.CopyComplete
 E:\Licenta2018\TestConsole\DataTraining\obj\Debug\DataTraining.dll
 E:\Licenta2018\TestConsole\DataTraining\obj\Debug\DataTraining.pdb
+E:\Licenta2018\TestConsole\DataTraining\bin\Debug\Config.dll
+E:\Licenta2018\TestConsole\DataTraining\bin\Debug\Config.pdb
